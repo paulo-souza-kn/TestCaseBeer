@@ -13,18 +13,15 @@ This Script have the table creation queries and procedures like:
 - dbo.BeerGoldLayer into db_gold (Gold layer for raw data).
 
 The server structure is like this:
-- BeersServerTest
+#### BeersServerTest
+- **db_bronze**
+- ***dbo.BeerBronzeLayer***: This is the initial raw data layer where unprocessed data is stored.
 
-## Layer Descriptions
+- **db_silver**
+- ***dbo.BeerSilverLayer***: This layer contains data that has been cleaned and transformed for further processing.
 
-### db_bronze
-- **dbo.BeerBronzeLayer**: This is the initial raw data layer where unprocessed data is stored.
-
-### db_silver
-- **dbo.BeerSilverLayer**: This layer contains data that has been cleaned and transformed for further processing.
-
-### db_gold
-- **dbo.BeerGoldLayer**: This final layer holds the refined, high-quality data ready for analysis and reporting.
+- **db_gold**
+- ***dbo.BeerGoldLayer***: This final layer holds the refined, high-quality data ready for analysis and reporting.
 
 
 ### API_Request.py
