@@ -16,26 +16,26 @@ The server structure is like this:
 #### BeersServerTest
 - **db_bronze**
   - **dbo.BeerBronzeLayer**: This is the initial raw data layer where unprocessed data is stored.
-  - IdRow INT PRIMARY KEY
-  - Name NVARCHAR(255),
-  - BreweryType NVARCHAR(255),
-  - AddressOne NVARCHAR(255),
-  - AddressTwo NVARCHAR(255),
-  - AddressThree NVARCHAR(255),
-  - City NVARCHAR(255),
-  - StateProvince NVARCHAR(255),
-  - PostalCode NVARCHAR(255),
-  - Country NVARCHAR(255),
-  - Longitude NVARCHAR(255),
-  - Latitude NVARCHAR(255),
-  - Phone NVARCHAR(255),
-  - WebSiteURL NVARCHAR(255),
-  - State NVARCHAR(255),
-  - Street NVARCHAR(255),
-  - LineHash NVARCHAR(255),
-  - FileName NVARCHAR(255),
-  - BlockHash NVARCHAR(255),
-  - InsertDate DATETIME
+    - IdRow INT PRIMARY KEY
+    - Name NVARCHAR(255),
+    - BreweryType NVARCHAR(255),
+    - AddressOne NVARCHAR(255),
+    - AddressTwo NVARCHAR(255),
+    - AddressThree NVARCHAR(255),
+    - City NVARCHAR(255),
+    - StateProvince NVARCHAR(255),
+    - PostalCode NVARCHAR(255),
+    - Country NVARCHAR(255),
+    - Longitude NVARCHAR(255),
+    - Latitude NVARCHAR(255),
+    - Phone NVARCHAR(255),
+    - WebSiteURL NVARCHAR(255),
+    - State NVARCHAR(255),
+    - Street NVARCHAR(255),
+    - LineHash NVARCHAR(255),
+    - FileName NVARCHAR(255),
+    - BlockHash NVARCHAR(255),
+    - InsertDate DATETIME
 
 - **db_silver**
   - **dbo.BeerSilverLayer**: This layer contains data that has been cleaned and transformed for further processing.
