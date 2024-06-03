@@ -125,6 +125,23 @@ CREATE TABLE dbo.BeerGoldLayer (
 """
 CreateTableIfNotExists(TableName, Schema)
 
+# Create View table agregated by Country, State, City and Type
+database = 'db_VW'
+TableName = 'dbo.VW_BeerGoldLayer'
+Schema = """
+CREATE TABLE dbo.VW_BeerGoldLayer (
+    IdRow INT PRIMARY KEY,
+    Country NVARCHAR(255),
+    State NVARCHAR(255),
+    City NVARCHAR(255),
+    BreweryType NVARCHAR(255),
+    BeersQty INT
+)
+"""
+CreateTableIfNotExists(TableName, Schema)
+
+
+
 def ExecuteSilverProcedure(Procedure, TargetTable):
 
     try:
