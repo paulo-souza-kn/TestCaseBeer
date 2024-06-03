@@ -6,6 +6,27 @@ This repository contains a case study on a brewery database by location, where y
 
 ## Scripts Overview
 
+### CreateBases.py
+This Script have the table creation queries and procedures like:
+- dbo.BeerBronzeLayer into db_bronze (Bronze layer for raw data);
+- dbo.BeerSilverLayer into db_silver (Silver layer for raw data);
+- dbo.BeerGoldLayer into db_gold (Gold layer for raw data).
+
+The server structure is like this:
+- BeersServerTest
+
+## Layer Descriptions
+
+### db_bronze
+- **dbo.BeerBronzeLayer**: This is the initial raw data layer where unprocessed data is stored.
+
+### db_silver
+- **dbo.BeerSilverLayer**: This layer contains data that has been cleaned and transformed for further processing.
+
+### db_gold
+- **dbo.BeerGoldLayer**: This final layer holds the refined, high-quality data ready for analysis and reporting.
+
+
 ### API_Request.py
 This scripts contain the API request <https://api.openbrewerydb.org/breweries> and get these columns: 
 - id: Line unique identifier
@@ -24,3 +45,6 @@ This scripts contain the API request <https://api.openbrewerydb.org/breweries> a
 - website_url: Website URL of the brewery
 - state: State where the brewery is located
 - street: Street address of the brewery (often similar to address_1)
+
+### BronzeLayer.py
+This Scripts is the second interable with the database, where insert raw data into bronze layer
