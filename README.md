@@ -17,16 +17,16 @@ Desejable tools:
 
 This job was create with PDI (Pentaho Data Integration) and works:
 - Firts the job start the API request python script that get the raw data into API;
-    - Condition 1: Try again if have any temporary error;
+    - Condition 1: Try again if have any temporary error and if successful, then continue, else enter into condition 2;
     - Condition 2: Send an e-mail with a error log.
 - Second the job start the insert data into databases with bronze layer python script that get the raw data and insert into bronze layer;
-    - Condition 1: Try again if have any temporary error;
+    - Condition 1: Try again if have any temporary error and if successful, then continue, else enter into condition 2;
     - Condition 2: Send an e-mail with a error log.
 - Third the job start the Silver layer python script that convert data columns with the right data type;
-    - Condition 1: Try again if have any temporary error;
+    - Condition 1: Try again if have any temporary error and if successful, then continue, else enter into condition 2;
     - Condition 2: Send an e-mail with a error log.
 - Fourth the job start the Gold layer python script that create an analyticials datas and insert into gold layer;
-    - Condition 1: Try again if have any temporary error;
+    - Condition 1: Try again if have any temporary error and if successful, then continue, else enter into condition 2;
     - Condition 2: Send an e-mail with a error log.
 - Then, the last step is send an e-mail telling that the job was successful.
 
