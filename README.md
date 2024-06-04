@@ -1,5 +1,12 @@
 # TestCaseBeer
 
+## Summary
+- [Introduction](#introduction)
+- [Job Overview](#job-overview)
+- [Scripts Overview](#scripts-overview)
+
+
+## Introduction
 This repository contains a case study on a brewery database by location, where you can examine the entire data engineering workflow. The following tools were used:
 - PDI (Pentaho Data Integration) for orchestration;
 - Python for API requests and data processing across the three layers (Bronze, Silver, and Gold);
@@ -42,7 +49,6 @@ The server structure is like this:
 #### BeersServerTest
 - **db_bronze**
   - **dbo.BeerBronzeLayer**: This is the initial raw data layer where unprocessed data is stored.
-  '''SQL
     - IdRow INT PRIMARY KEY
     - Name NVARCHAR(255),
     - BreweryType NVARCHAR(255),
@@ -63,7 +69,7 @@ The server structure is like this:
     - FileName NVARCHAR(255),
     - BlockHash NVARCHAR(255),
     - InsertDate DATETIME
-'''
+
 - **db_silver**
   - **dbo.BeerSilverLayer**: This layer contains data that has been cleaned and transformed for further processing.
     - **dbo.BeerBronzeLayer**: This is the initial raw data layer where unprocessed data is stored.
