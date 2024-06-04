@@ -1,6 +1,6 @@
 # TestCaseBeer
-Creator: Souza Paulo
-Creation date: 2024-05-29
+- Creator: Souza Paulo
+- Creation date: 2024-05-29
 
 ## Summary
 - [Introduction](#introduction)
